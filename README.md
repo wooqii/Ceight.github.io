@@ -1,2 +1,2 @@
-# DcCoin
-Public BlockChain Community network about JayouWooPa
+# Ceight.io
+Public BlockChain Community network with Ethereum
