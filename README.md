@@ -5,6 +5,6 @@
         <title>ceight</title>
     </head>
     <body>
-        ceight homepage The new generation of Ethereum community application
+        ceight homepage The next generation web service of Connecting Human and Culture
     </body>
 </html>
