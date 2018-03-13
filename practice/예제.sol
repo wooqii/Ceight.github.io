@@ -127,10 +127,10 @@ contract CoinCeight {
     mapping (address => uint) public balances; // public 키워드는 계약 바깥에서 해당 상태변수를 볼 수 있도록 허락함
     event Sent(address from, address to, uint amount); //event는 계약 내부에서 일어나서 바깥으로 전달할 사건을 나타냄
     function Coin() public {
-        minter = msg.sender; //발행자 = 계약 작성자 라는 뜻
+        minter = msg.sender; //minter = 발행자 = 계약 작성자 라는 뜻
     }
     function mint(address receiver, uint amount) public { //mint : 발행, receiver : 토큰 받는 주소, amount : 발행량
-        if (msg.sender != minter) return; //minter가 아니라면 return;종료
+        if (msg.sender != minter) return; //minter가 아니라면 return; 반환 및 종료
         balances[receiver] += amount; //발행자라면 amount 만큼 증가시켜준다
     }
     function send(address receiver, uint amount) public { //send : 보내기 
