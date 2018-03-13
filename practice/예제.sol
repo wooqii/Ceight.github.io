@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18; //0.4.0 솔리디티의 버전
+pragma solidity ^0.4.18; //0.4.0 솔리디티의 버전. 솔리디티는 프라그마 솔리디티를 반드시 버전명과 함께 명시해야함
 
 // 이것은 주석입니다.
 contract example { //example 은 임의의 스마트계약 이름
@@ -27,7 +27,7 @@ contract example { //example 은 임의의 스마트계약 이름
         // bool 데이터는 true, false 둘중의 하나의 값만 가진다.
         // 정수를 나타내는것은 부호가 있는 int, uint 두가지가 있고 크기에 따라 int8, uint256 등이 있다.
         // address 데이터는 20바이트의 이더리움 주소를 저장 할 수 있고 몇가지 추가기능이 있다.
-        // balance : 해당 주소의 잔핵을 가져온다
+        // balance : 해당 주소의 잔액을 가져온다
         // transfer : 해당 주소롤 이더를 전송한다.
         // call :  다른 계약의 기능을 호출 할 때 사용한다.
         // 문자열 string 데이터는 ""로 둘러싸인 어떤 문자열도 저장 가능하다.
@@ -87,7 +87,7 @@ contract BetterContract is BasicContract {// 상속할 때는 is 키워드를 �
         return basicA + b;
     }
 }
-contract ClientReceipt {//이벤트 : 함수 수행이 블록체인에 기록될 때, 어떤 사건을 주시하는 코드 - 주시하고 알려줌
+contract ClientReceipt { //이벤트 : 함수 수행이 블록체인에 기록될 때, 어떤 사건을 주시하는 코드 - 주시하고 알려줌
     event Deposit(address indexed _from, bytes32 indexed _id, uint _value);
     function deposit(bytes32 _id) {
         Deposit(msg.senderm _id, msg.value); //이벤트를 생성하는 코드
@@ -115,7 +115,7 @@ contract ClientReceipt {//이벤트 : 함수 수행이 블록체인에 기록될
 contract SimpleStorage {
     uint storedData; // 저장소에 값을 기록하는데 20000 wei 가스, 변경시 5000 가스가 소모되는 매우 비싼자원
     function set(uint x) public {
-        storedData = x; // 파라미터 혹은 함수 내의 변수는 값을 저장하는데 3가스만 드는 매우 저렴한 자원이지만 영속적이지 않고 오직 꼐약이 실행되는 순간에만 존재
+        storedData = x; // 파라미터 혹은 함수 내의 변수는 값을 저장하는데 3가스만 드는 매우 저렴한 자원이지만 영속적이지 않고 오직 계약이 실행되는 순간에만 존재
     }
 
     function get() public constant returns (uint) {//constant 는 읽기전용.
