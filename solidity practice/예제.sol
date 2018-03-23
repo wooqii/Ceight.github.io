@@ -74,6 +74,95 @@ contract example { //example 은 임의의 스마트계약 이름
         }
     }
 }
+contract DataTypeSample { // 솔리디티 데이터타입 샘플
+    function getValueType() constant returns (uint) {
+        uint a;  // uint형 변수 a를 선언. 이 시점에서 a는 0으로 초기화된다.
+        a = 1; // a의 값이 1이 도니다.
+        uint b = a; // 변수 a에 a의 값 1이 대입
+        b = 2; // b의 값이 2가 된다.
+        return a; // a의 값인 1이 반환
+    }
+    function getReferenceType() constant return (uint[2]) {
+        uint[2] a; // uint 형식을 가진 배열 변수 a 를 선언
+        a[0] = 1; // 배열의 첫 번째 요소의 값에 1을 대입
+        a[1] = 2; // 배열의 두 번째 요소의 값에 2를 대입
+        uint[2] b = a; // uint 형식을 가진 배열 변수 b를 선언하고 a를 b에 대입. a는 데이터 영역 주소이기 때문에 b는 a와 동일한 데이터 영역을 참조함
+        b[0] = 10; // b와 a는 같은 데이터 영역을 참조하기 때문에 a[0]도 10이 된다.
+        b[1] = 20; // 마찬가지로 a[1]도 20이 된다.
+        return a; // 10, 20 이 반환된다.
+    }
+}
+contract IntSample {
+    function division() constant returns (uint) {
+        uint a = 3;
+        uint b = 2;
+        uint c = a / b * 10 // a / b의 결과는 1이다
+        return c; // 10이 반환된다.
+    }
+    function divisionLiterals() constant returns (uint) {
+        uint c = 3 / 2 * 10; // 상수이기 때문에 a / b의 나머지를 버리지 않는다 즉 1.5가 된다.
+        return c; // 15를 반환한다.
+    }
+    function divisionByZero() constant returns (uint) {
+        uint a = 3;
+        uint c = a / 0;  //컴파일 되지만 실행시 예외가 발생한다.
+        return c; // uint c = 3 / 0 으로 하면 컴파일도 진행되지 않는다.
+    }
+    function shift() constant returns (uint[2]) {
+        uint[2] a;
+        a[0] = 16 << 2; // 16 * 2 ** 2 = 64
+        a[1] = 16 >> 2; // 16 / 2 ** 2 = 4
+        return a; // 64, 4가 반환된다.
+    }
+}
+contract AddressSample { //주소 샘플. 이름없는 함수(송금되면 실행) payable을 지정해 Ether를 받을 수 있다.
+    function () payable {}
+    function getBalance(address _target) constant returns(uint) {
+        if (_target == address(0)) {  // _target이 0인 경우 계약 자신의 주소를 할당
+            _target = this;
+        }
+        return _target.balance;  //잔고반환.
+    }
+    // 이후 송금 메서드를 실행하기 전 이 계약에 대해 송금해둬야 한다.
+    // 인수로 지정된 주소에 transfer를 사용해 송금
+    function send(address _to, uint _amount) {
+        if (!_to.send(_amount)) { //send를 사용할 경우 반환값을 체크해야 한다.
+        }
+    }
+    // 인수로 지정된 주소에 call을 사용해 송금
+    function call(address _to, uint _amount) {
+        if (! _to.call.value(_amount).gas(1000000)()) {  //call도 반환값을 체크해야한다.
+        }
+    }
+    // 인출 패턴(transfer)
+    function withdraw() {
+        address to = msg.sender; // 메서드 실행자를 받는 사람으로 한다.
+        to.transfer(this.balance); //전액 송금한다.
+    }
+    // 인출 패턴 (call)
+    function withdraw2() {
+        address to = msg.sender; // 메서드 실행자를 받는 사람으로 한다.
+        if (!to.call.value(this.balance).gas(1000000)()) { //전액 송금한다
+        }
+    }
+}
+contract ArraySample {
+    uint[5] public fArray = [uint(10), 20, 30, 40, 50];  //고정 길이 배열의 선언 및 초기화
+    uint[] public dArray; // 가변 길이 배열 선언
+    function getFixedArray() constant returns(uint[5]) {
+        uint[5] storage a = fArray; //길이가 5인 고정 배열을 선언
+        //메서드 안에서는 이 형식으로 초기화할 수 없다.
+        // uint[5] b =[uint[1], 2, 3, 4, 5]
+        for (uint i = 0; i < a.length; i++) {  //초기화
+            a[i] = i + 1;
+        }
+        return a;  // [1, 2, 3, 4, 5]를 반환
+    }
+    function getFixedArray() constant returns(uint[5]) {
+        uint[5] storage b = fArray; //상태변수 초기화
+        return b; // [10, 20, 30, 40, 50] 을 반환
+    }
+}
 contract BasicContract { //상속을 당하는 계약
     int a;
     function getA() returns (int) {
