@@ -1,21 +1,23 @@
-pragma solidity ^0.4.18; //0.4.0 솔리디티의 버전. 솔리디티는 프라그마 솔리디티를 반드시 버전명과 함께 명시해야함
+pragma solidity ^0.4.21; //0.4.0 솔리디티의 버전. 솔리디티는 프라그마 솔리디티를 반드시 버전명과 함께 명시해야함
 
 // 이것은 주석입니다.
 contract example { //example 은 임의의 스마트계약 이름
     int value; //상태변수 - 상태변수가 바로 계약계정의 storage이다.
 
-    function example { //생성자
-        value = 0;
+    function example () { //생성자 - 특수한 함수로 계약배포시 최초 한번 실행 됨
+        value = 0; // 선언한 상태변수를 0으로 초기화
         } //생성자는 계약 이름과 동일한 함수로써 최초 배포시에만 수행된다. 반드시 필요하지는 않음
-    function doNothing { //함수. 함수는 이름과 파라미터, 반환값을 가지는데 이중 파라미터와 반환값이 필수는 아님
+    function doNothing () public { //함수. 함수는 이름과 파라미터(인수), 반환값을 가지는데 이중 파라미터와 반환값이 필수는 아님
     // 아무것도 하지 않음
     }
 }
-    function Calculator {
+    function Calculator () public {
         int sum; //상태변수
-        function sum(int a, int b) { //두 개의 파라미터를 갖는 함수
+        
+        function sum(int a, int b) { //두 개의 정수형 파라미터를 갖는 함수
             sum = a + b;
             }
+
         function sumAndReturn(int a, int b) returns (int) {
             sum = a + b;
             return sum;
@@ -27,15 +29,15 @@ contract example { //example 은 임의의 스마트계약 이름
         // bool 데이터는 true, false 둘중의 하나의 값만 가진다.
         // 정수를 나타내는것은 부호가 있는 int, uint 두가지가 있고 크기에 따라 int8, uint256 등이 있다.
         // address 데이터는 20바이트의 이더리움 주소를 저장 할 수 있고 몇가지 추가기능이 있다.
-        // balance : 해당 주소의 잔액을 가져온다
-        // transfer : 해당 주소롤 이더를 전송한다.
-        // call :  다른 계약의 기능을 호출 할 때 사용한다.
+        // ㄴbalance : 해당 주소의 잔액을 가져온다
+        // ㄴtransfer : 해당 주소롤 이더를 전송한다.
+        // ㄴcall :  다른 계약의 기능을 호출 할 때 사용한다.
         // 문자열 string 데이터는 ""로 둘러싸인 어떤 문자열도 저장 가능하다.
         // Array 배열 : 다른 자료형이 중첩된 형태의 배열이다. int[]는 정수배열, address[]는 주소배열
         // *mapping : 배열은 데이터가 일렬로 저장되지만 사상은 키, 값으로 이루어진 쌍이 일렬로 저장된다
         // e.g. mapping(address => uint) 와 같이 선언한다.
         // struct : 구조체 서로 다른 자료형의 데이터 여러개를 포함하는 커스텀한 자료형 생성가능
-    function dataExample {
+    struct dataExample {
         bool boolean; // true, false
         uint unsignedInteger; // 부호없는 정수
         int interger; // 부호있는 정수
@@ -75,14 +77,14 @@ contract example { //example 은 임의의 스마트계약 이름
     }
 }
 contract DataTypeSample { // 솔리디티 데이터타입 샘플
-    function getValueType() constant returns (uint) {
+    function getValueType() public view returns (uint) {
         uint a;  // uint형 변수 a를 선언. 이 시점에서 a는 0으로 초기화된다.
         a = 1; // a의 값이 1이 도니다.
         uint b = a; // 변수 a에 a의 값 1이 대입
         b = 2; // b의 값이 2가 된다.
         return a; // a의 값인 1이 반환
     }
-    function getReferenceType() constant return (uint[2]) {
+    function getReferenceType() public view return (uint[2]) {
         uint[2] a; // uint 형식을 가진 배열 변수 a 를 선언
         a[0] = 1; // 배열의 첫 번째 요소의 값에 1을 대입
         a[1] = 2; // 배열의 두 번째 요소의 값에 2를 대입
@@ -93,22 +95,22 @@ contract DataTypeSample { // 솔리디티 데이터타입 샘플
     }
 }
 contract IntSample {
-    function division() constant returns (uint) {
+    function division() public view returns (uint) {
         uint a = 3;
         uint b = 2;
         uint c = a / b * 10 // a / b의 결과는 1이다
         return c; // 10이 반환된다.
     }
-    function divisionLiterals() constant returns (uint) {
+    function divisionLiterals() public view returns (uint) {
         uint c = 3 / 2 * 10; // 상수이기 때문에 a / b의 나머지를 버리지 않는다 즉 1.5가 된다.
         return c; // 15를 반환한다.
     }
-    function divisionByZero() constant returns (uint) {
+    function divisionByZero() public view returns (uint) {
         uint a = 3;
         uint c = a / 0;  //컴파일 되지만 실행시 예외가 발생한다.
         return c; // uint c = 3 / 0 으로 하면 컴파일도 진행되지 않는다.
     }
-    function shift() constant returns (uint[2]) {
+    function shift() public view returns (uint[2]) {
         uint[2] a;
         a[0] = 16 << 2; // 16 * 2 ** 2 = 64
         a[1] = 16 >> 2; // 16 / 2 ** 2 = 4
@@ -117,7 +119,7 @@ contract IntSample {
 }
 contract AddressSample { //주소 샘플. 이름없는 함수(송금되면 실행) payable을 지정해 Ether를 받을 수 있다.
     function () payable {}
-    function getBalance(address _target) constant returns(uint) {
+    function getBalance(address _target) public view returns(uint) {
         if (_target == address(0)) {  // _target이 0인 경우 계약 자신의 주소를 할당
             _target = this;
         }
@@ -149,7 +151,7 @@ contract AddressSample { //주소 샘플. 이름없는 함수(송금되면 실�
 contract ArraySample {
     uint[5] public fArray = [uint(10), 20, 30, 40, 50];  //고정 길이 배열의 선언 및 초기화
     uint[] public dArray; // 가변 길이 배열 선언
-    function getFixedArray() constant returns(uint[5]) {
+    function getFixedArray() public view returns(uint[5]) {
         uint[5] storage a = fArray; //길이가 5인 고정 배열을 선언
         //메서드 안에서는 이 형식으로 초기화할 수 없다.
         // uint[5] b =[uint[1], 2, 3, 4, 5]
@@ -158,7 +160,7 @@ contract ArraySample {
         }
         return a;  // [1, 2, 3, 4, 5]를 반환
     }
-    function getFixedArray() constant returns(uint[5]) {
+    function getFixedArray() public view returns(uint[5]) {
         uint[5] storage b = fArray; //상태변수 초기화
         return b; // [10, 20, 30, 40, 50] 을 반환
     }
@@ -207,7 +209,7 @@ contract SimpleStorage {
         storedData = x; // 파라미터 혹은 함수 내의 변수는 값을 저장하는데 3가스만 드는 매우 저렴한 자원이지만 영속적이지 않고 오직 계약이 실행되는 순간에만 존재
     }
 
-    function get() public constant returns (uint) {//constant 는 읽기전용.
+    function get() public public view returns (uint) {//public view 는 읽기전용.
         return storedData; // 저장소의 값을 읽어올 때에는 200가스가 소모됨
     }
 }
@@ -228,15 +230,15 @@ contract CoinCeight {
         balances[receiver] += amount; // 수신자의 잔고를 발행량만큼 늘린다.
         emit Sent(msg.sender, receiver, amount); //emit 키워드는 이벤트를 생성해서 모니터링 하고 있는 노드에게 전달하는 역할을 함
     }
-    function queryBalance(address addr) constant returns (uint balance) { //특정주소의 계좌에 해당하는 잔액을 조회
+    function queryBalance(address addr) public view returns (uint balance) { //특정주소의 계좌에 해당하는 잔액을 조회
         return balances[addr];
     }
 }
 // ERC20 이더리움 토큰 표준
 contract ERC20Interface {
-    function totalSupply() public constant returns (uint);
-    function balanceOf(address tokenOwner) public constant returns (uint balance);
-    function allowance(address tokenOwner, address spender) public constant returns (uint remaining);
+    function totalSupply() public public view returns (uint);
+    function balanceOf(address tokenOwner) public public view returns (uint balance);
+    function allowance(address tokenOwner, address spender) public public view returns (uint remaining);
     function transfer(address to, uint tokens) public returns (bool success);
     function approve(address spender, uint tokens) public returns (bool success);
     function transferFrom(address from, address to, uint tokens) public returns (bool success);

@@ -45,7 +45,7 @@ contract Owned {
         }
 
         // (5) 토큰 메서드용 한정 수식자
-        modifier onlyCoin() { if (msg.dender == coin) _;}
+        modifier onlyCoin() { if (msg.sender == coin) _;}
 
         // (6) 토큰 주소 설정
         function secCoin(address _addr) public onlyOwner {
