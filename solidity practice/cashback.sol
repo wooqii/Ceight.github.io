@@ -14,7 +14,10 @@ contract CeightToken {
     address public owner; //소유자 주소
 
     //수식자
-    modifier onlyOwner() { if (msg.sender != owner) revert(); _; }
+    modifier onlyOwner() { 
+        if (msg.sender != owner) revert(); 
+        _; 
+        }
 
     //(2) 이벤트 알림
     event Transfer(address indexed from, address indexed to, uint256 value);

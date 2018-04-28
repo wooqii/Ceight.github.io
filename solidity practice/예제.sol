@@ -217,7 +217,7 @@ contract CoinCeight {
     address public minter; //minter는 토큰 발행자
     mapping (address => uint) public balances; // public 키워드는 계약 바깥에서 해당 상태변수를 볼 수 있도록 허락함
     event Sent(address from, address to, uint amount); //event는 계약 내부에서 일어나서 바깥으로 전달할 사건을 나타냄
-    function Coin() public {
+    function CoinCeight() public {
         minter = msg.sender; //minter = 발행자 = 계약 작성자 라는 뜻
     }
     function mint(address receiver, uint amount) public { //mint : 발행, receiver : 토큰 받는 주소, amount : 발행량
