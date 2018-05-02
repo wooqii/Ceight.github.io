@@ -1,11 +1,11 @@
 pragma solidity ^0.4.23;
 
-import 'zeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
+import "./zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
 contract CeightToken is StandardToken {
     uint public INITIAL_SUPPLY = 21000000;
-    string public name = 'CeightToken';
-    string public symbol = 'CEX'
+    string public name = "CeightToken";
+    string public symbol = "CEX";
     uint8 public decimals = 18;
     address owner;
     bool public released = false;
