@@ -31,7 +31,7 @@ contract CeightToken is StandardToken {
         super.transfer(to, value);
     }
 
-    function allowance(address owner, address spender) public onlyReleased view returns(uint256) {
+    function allowance(Address owner, address spender) public onlyReleased view returns(uint256) {
         super.allowance(owner, spender);
     }
 

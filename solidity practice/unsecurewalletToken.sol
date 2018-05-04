@@ -10,7 +10,7 @@ contract unsecureGeneralWalletCompatibleToken2 {
 
     event Transfer (address _from, address _to, uint _value);
 
-    constructor (string tokenName, string tokenSymbol, uint8 decimalUnits, uint256 initialSupply) public {
+    constructor ( string tokenName, string tokenSymbol, uint8 decimalUnits, uint256 initialSupply) public {
         name = tokenName;
         symbol = tokenSymbol;
         decimals = decimalUnits;
