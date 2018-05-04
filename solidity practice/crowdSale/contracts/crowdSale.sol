@@ -10,7 +10,7 @@ contract CeightToken is StandardToken {
     address owner;
     bool public released = false;
 
-    function CeightToken() public {
+    constructor () public {
         totalSupply_ = INITIAL_SUPPLY * 10 ** uint(decimals);
         balances[msg.sender] = INITIAL_SUPPLY;
         owner = msg.sender;
@@ -31,7 +31,7 @@ contract CeightToken is StandardToken {
         super.transfer(to, value);
     }
 
-    function allowance(Address owner, address spender) public onlyReleased view returns(uint256) {
+    function allowance(address owner, address spender) public onlyReleased view returns(uint256) {
         super.allowance(owner, spender);
     }
 
