@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124eb4e7-8a54-49d4-a182-f8d0dd855ca9" name="Default" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/OpenTutorialWeb1/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol" beforeDir="false" afterPath="$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solidity practice/crowdSale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/solidity practice/crowdSale/package.json" afterDir="false" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +24,13 @@
       <file leaf-file-name="crowdSale.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state>
               <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+=======
+            <state relative-caret-position="345">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
             </state>
           </provider>
         </entry>
@@ -27,12 +38,18 @@
       <file leaf-file-name="checkbox.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OpenTutorialWeb1/checkbox.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-7">
               <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+=======
+            <state relative-caret-position="60">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="3.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OpenTutorialWeb1/3.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,6 +73,8 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
+=======
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -90,11 +109,17 @@
       <path value="$PROJECT_DIR$/solidity practice/crowdSale/package.json" />
     </packageJsonPaths>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds">
     <option name="x" value="-13" />
     <option name="y" value="27" />
     <option name="width" value="1380" />
     <option name="height" value="970" />
+=======
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -104,7 +129,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="AndroidView" />
+=======
+      <pane id="PackagesPane" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -113,16 +142,23 @@
               <item name="wooqii.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="wooqii.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="wooqii.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="wooqii.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="OpenTutorialWeb1" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+=======
+      <pane id="AndroidView" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,17 +268,32 @@
       <workItem from="1525243619179" duration="2197000" />
       <workItem from="1525422298492" duration="247000" />
       <workItem from="1525422803735" duration="545000" />
+<<<<<<< HEAD
       <workItem from="1525931412380" duration="59000" />
       <workItem from="1525950410058" duration="398000" />
+=======
+      <workItem from="1525583386473" duration="492000" />
+      <workItem from="1525593528412" duration="179000" />
+      <workItem from="1525712619046" duration="606000" />
+      <workItem from="1525745796508" duration="530000" />
+      <workItem from="1525968135789" duration="336000" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="4802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="22" width="1104" height="776" extended-state="0" />
     <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="6488000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -257,8 +308,9 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24862385" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11980831" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Learn" order="3" weight="0.32994923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -282,38 +334,102 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="266">
           <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+=======
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solidity practice/unsecurewalletToken.sol">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="76">
+=======
+        <state relative-caret-position="60">
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/solidity practice/TokenCloudSale.sol">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
+=======
+    <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solidity practice/unsecurewalletToken.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solidity practice/unsecurewalletToken.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solidity practice/unsecurewalletToken.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
           <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solidity practice/unsecurewalletToken.sol">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="76">
+=======
+        <state relative-caret-position="60">
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
           <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/solidity practice/TokenCloudSale.sol">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
     <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -349,9 +465,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/solidity practice/TokenCloudSale.sol">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
     <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/node_modules/zeppelin-solidity/contracts/crowdsale/Crowdsale.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -361,13 +480,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/solidity practice/unsecurewalletToken.sol">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
+=======
+        <state relative-caret-position="60">
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solidity practice/crowdSale/contracts/crowdSale.sol">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
         </state>
@@ -384,6 +508,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+=======
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+>>>>>>> 9fbcbd8a3b45de0a4883ace0c68088a610217453
         </state>
       </provider>
     </entry>
