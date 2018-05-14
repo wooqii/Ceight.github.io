@@ -16,10 +16,32 @@
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';">
-    <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';">
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var links = document.querySelectorAll('a');
+        var i = 0;
+        while(i<links.length) {
+            links[i].style.color='powderblue';
+            i=i+1;
+        }
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+
+        var links = document.querySelectorAll('a');
+        var i = 0;
+        while(i<links.length) {
+            links[i].style.color='blue';
+            i=i+1;
+        }
+    }
+    ">
     <ol>
         <li><a href="1.html">HTML</a></li>
         <li><a href="2.html">CSS</a></li>
