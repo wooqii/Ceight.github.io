@@ -27,7 +27,7 @@ contract CrowdFund {
     
         beneficiary = ifSuccessfulSendTo;
         fundingGoal = fundingGoalInEther * 1 ether;
-        deadline = block.timestamp + durationInMinutes * 1 minutes;
+        deadline = now + durationInMinutes * 1 minutes;
         price = etherCostOfEachToken * 1 ether;
         tokenReward = token(addressOfTokenUsedAsReward);
     }
@@ -41,7 +41,7 @@ contract CrowdFund {
         emit FundTransfer(msg.sender, amount, true);        
     }
 
-    modifier afterDeadline() {if(block.timestamp>=deadline)_;}
+    modifier afterDeadline() {if(now>=deadline)_;}
 
     function checkGoalRechead() external afterDeadline {
         if (amountRaised >= fundingGoal){
