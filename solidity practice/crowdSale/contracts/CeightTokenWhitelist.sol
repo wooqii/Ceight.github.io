@@ -5,7 +5,7 @@ contract CeightTokenWhitelist {
 
     mapping(bytes32 => bool) whitelist;
 
-    function CeightTokenWhitelist() public {
+    constructor () public {
         owner = msg.sender;
     }
 

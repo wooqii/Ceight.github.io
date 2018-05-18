@@ -2,7 +2,8 @@ pragma solidity ^0.4.23;
 
 import "./CeightToken.sol";
 import "./CeightTokenWhitelist.sol";
-import "./zeppelin-solidity/contracts/math/SafeMath.sol";
+// import "./SafeMath.sol";;
+import "zeppelin-solidity/contracts/math/SafeMath.sol";
 
 contract CeightTokenSale {
     uint public constant HONGS_PER_WEI = 10000000;
@@ -11,10 +12,11 @@ contract CeightTokenSale {
     CeightTokenWhitelist public whitelist;
     uint public hongsRaised;
     bool private closed;
+    using SafeMath for uint256;
 
     constructor (
         CeightToken _token, 
-        CeightTokenWhitelist _whitelst
+        CeightTokenWhitelist _whitelist
     ) public {
         require(_token != address(0));
         token = _token;

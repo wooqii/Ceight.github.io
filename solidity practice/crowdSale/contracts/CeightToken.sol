@@ -1,6 +1,6 @@
 pragma solidity ^0.4.23;
 
-import "./zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
+import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
 contract CeightToken is StandardToken {
     uint public INITIAL_SUPPLY = 21000000;
@@ -31,12 +31,12 @@ contract CeightToken is StandardToken {
         super.transfer(to, value);
     }
 
-    function allowance(address owner, address spender) public onlyReleased view returns(uint256) {
-        super.allowance(owner, spender);
+    function allowance(address _owner, address spender) public onlyReleased view returns(uint256) {
+        super.allowance(_owner, spender);
     }
 
-    function transferFrom(address from, address to, uint256 value) public onlyReleased view returns(uint256) {
-        super.allowance(from, to, value);
+    function transferFrom(address from, address to, uint256 value) public onlyReleased returns(bool) {
+        super.transferFrom(from, to, value);
     }
 
     function approve(address spender, uint256 value) public onlyReleased returns(bool) {

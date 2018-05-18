@@ -1,5 +1,5 @@
 {
-  "name": "crowdSale",
+  "name": "crowdsale",
   "version": "1.0.0",
   "main": "truffle-config.js",
   "directories": {
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "zeppelin-solidity": "1.8.0"
+    "zeppelin-solidity": "^1.8.0"
   },
   "devDependencies": {},
   "description": ""
