@@ -5,8 +5,8 @@ interface token {
 }
 
 contract CrowdFund {
-    address public beneficiary;
-    uint public fundingGoal;
+    address public beneficiary; 
+    uint public fundingGoal; 
     uint public amountRaised;
     uint public deadline;
     uint public price;
@@ -18,13 +18,13 @@ contract CrowdFund {
     event GoalReached(address beneficiaryAddress, uint amountRaisedValue );
     event FundTransfer(address backer, uint amount, bool isContribution );
 
-    constructor () public { 
-        address ifSuccessfulSendTo;
-        uint fundingGoalInEther;
-        uint durationInMinutes;
-        uint etherCostOfEachToken;
-        address addressOfTokenUsedAsReward;
-    
+    constructor ( 
+        address ifSuccessfulSendTo; //목표금액 달성시 모금액을 받을 어카운트
+        uint fundingGoalInEther; //모금할 목표 이더
+        uint durationInMinutes; //분으로 환산한 모금기간
+        uint etherCostOfEachToken; // 이더와 토큰의 교환 비율
+        address addressOfTokenUsedAsReward; //청약보상으로 지급할 토큰컨트랙트 주소
+        ) public {
         beneficiary = ifSuccessfulSendTo;
         fundingGoal = fundingGoalInEther * 1 ether;
         deadline = now + durationInMinutes * 1 minutes;
