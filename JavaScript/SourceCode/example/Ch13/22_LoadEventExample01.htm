@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load Event Example</title>
+    <script type="text/javascript" src="08_EventUtil.js"></script>
+</head>
+<body>
+    <p>Load event example.</p>
+    <script type="text/javascript">
+        EventUtil.addHandler(window, "load", function(event){
+            console.log("Loaded!");
+        });
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

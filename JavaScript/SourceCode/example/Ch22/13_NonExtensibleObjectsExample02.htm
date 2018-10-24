@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Non-Extensible Objects Example</title>
+</head>
+<body>
+    <p>This only works in browsers that natively support ECMAScript 5.</p>
+    <script>
+        var person = { name: "Nicholas" };
+        console.log(Object.isExtensible(person));   //true
+        
+        Object.preventExtensions(person);
+        console.log(Object.isExtensible(person));   //false
+        
+        person.age = 29;
+        console.log(person.age);
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

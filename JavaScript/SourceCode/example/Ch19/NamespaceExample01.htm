@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+    <title>Namespace Example</title>
+</head>
+<body>
+    <p>This example only works in Firefox 1.5+.</p>
+    <script type="text/javascript;e4x=1">
+    
+        var messages = <messages>
+            <message>Hello world!</message>
+        </messages>;
+        var wrox = new Namespace("wrox", "http://www.wrox.com/");
+        messages.setNamespace(wrox);
+        messages.message.setNamespace(wrox);
+
+        console.log(messages);
+        
+        console.log(messages.wrox::message);
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

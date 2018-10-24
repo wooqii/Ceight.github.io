@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scope-Safe Constructors Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+        function Person(name, age, job){
+            this.name = name;
+            this.age = age;
+            this.job = job;
+        }
+        
+        var person1 = new Person("Nicholas", 29, "Software Engineer");
+        console.log(person1.name);     //"Nicholas"
+        console.log(person1.age);      //29
+        console.log(person1.job);      //"Software Engineer"
+
+        var person2 = Person("Nicholas", 29, "Software Engineer");
+        console.log(person2);         //undefined
+        console.log(window.name);     //"Nicholas"
+        console.log(window.age);      //29
+        console.log(window.job);      //"Software Engineer"
+
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

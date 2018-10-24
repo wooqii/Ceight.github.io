@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Execution Context Example 3</title>
+    <script type="text/javascript">
+          
+        function buildUrl() {
+            var qs = "?debug=true";
+        
+            with(location){
+                var url = href + qs;        
+            }
+        
+            return url;
+        }
+
+        var result = buildUrl();
+        console.log(result);
+      
+    </script>
+
+</head>
+<body>
+  
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

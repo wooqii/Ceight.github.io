@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+    <title>XML Construction Example</title>
+</head>
+<body>
+    <p>This example only works in Firefox 1.5+.</p>
+    <script type="text/javascript;e4x=1">
+        var tagName = "color";
+        var color = "red";
+        var xml = <{tagName}>{color}</{tagName}>;
+        
+        console.log(xml.toXMLString());  //"<color>red</color>"
+
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

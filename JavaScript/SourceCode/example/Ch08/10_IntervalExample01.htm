@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interval Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        //avoid!
+        setInterval("console.log('Hello world!') ", 10000);
+        
+        //preferred
+        setInterval(function() { 
+            console.log("Hello world!"); 
+        }, 10000);            
+
+
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

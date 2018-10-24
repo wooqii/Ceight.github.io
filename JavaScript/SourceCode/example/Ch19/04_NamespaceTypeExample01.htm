@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8" />
+    <title>Namespace Type Example</title>
+</head>
+<body>
+    <p>This example only works in Firefox 1.5+.</p>
+    <script type="text/javascript;e4x=1">
+    
+        var ns = new Namespace("http://www.wrox.com");    //default namespace
+        var wrox = new Namespace("wrox", "http://www.wrox.com");  //wrox namespace
+        
+        console.log(ns.uri);
+        console.log(ns.prefix);
+        console.log(wrox.uri);
+        console.log(wrox.prefix);
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

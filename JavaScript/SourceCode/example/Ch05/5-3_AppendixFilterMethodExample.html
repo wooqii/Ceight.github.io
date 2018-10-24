@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="http://tranbot.net/util/safeConsole/safeconsole.css"/>
+  <title>filter 메서드</title>
+</head>
+
+<body>
+<script src="http://tranbot.net/util/safeConsole/safeconsole.min.js"></script>
+<script type="text/javascript">
+initConsole();
+if (![1].filter) {
+    Array.prototype.filter = function (callback) {
+        var rtn = new Array();
+        for (var i = 0; i < this.length; i++) {
+            if ( callback(this[i]) ) {
+                rtn.push(this[i])
+            } 
+        };
+        return rtn;
+    }
+}
+var values = [1, 2, 3, 4, 5];
+var values2 = values.filter(function (item) {
+    return (item > 2);
+});
+console.log(values);
+console.log(values2);
+</script>
+</body>
+</html>

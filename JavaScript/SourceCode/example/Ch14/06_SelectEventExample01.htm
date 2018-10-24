@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Event Example</title>
+    <script type="text/javascript" src="10_EventUtil.js"></script>
+</head>
+<body>
+    <form method="post" action="javascript:console.log('Form submitted!')" id="myForm">        
+        <div>
+            <label for="comments">Any comments?</label><br>
+            <textarea rows="10" cols="50" id="comments" name="textbox1">Select some of this text.</textarea>
+        </div>
+        <input type="button" value="Select Text" id="select-btn">
+        <input type="submit" value="Submit Form" id="submit-btn">
+    </form>     
+    <script type="text/javascript">
+        var textbox = document.forms[0].elements["textbox1"];
+        EventUtil.addHandler(textbox, "select", function(event){
+            console.log("Text selected: " + textbox.value);
+        });
+        EventUtil.addHandler(document.getElementById("select-btn"), "click", function(event){
+            document.getElementById("comments").select();
+        });               
+
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

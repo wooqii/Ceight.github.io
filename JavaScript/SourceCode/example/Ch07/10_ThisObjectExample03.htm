@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This Object Example 3</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        
+            var name = "The Window";
+            
+            var object = {
+                name : "My Object",
+            
+                getName: function(){
+                    return this.name;
+                }
+            };
+            
+            console.log(object.getName());     //"My Object"
+            console.log((object.getName)());   //"My Object"
+            console.log((object.getName = object.getName)());   //"The Window" in non-strict mode
+
+        </script>
+     
+    <script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

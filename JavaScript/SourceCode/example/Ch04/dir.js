@@ -1,0 +1,11 @@
+var examples = ['01_DynamicPropertiesExample01.htm',
+'02_DynamicPropertiesExample02.htm',
+'03_FunctionArgumentsExample01.htm',
+'04_FunctionArgumentsExample02.htm',
+'05_DeterminingTypeExample01.htm',
+'06_ExecutionContextExample01.htm',
+'07_ExecutionContextExample03.htm',
+'08_ExecutionContextExample04.htm',
+'09_ExecutionContextExample05.htm',
+'10_ExecutionContextExample06.htm',
+'11_ExecutionContextExample07.htm'];

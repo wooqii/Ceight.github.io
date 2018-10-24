@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OnError Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        window.onerror = function(message, url, line){
+            console.log(message);
+            return false;
+        };
+        throw new Error("Something bad happened.");
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

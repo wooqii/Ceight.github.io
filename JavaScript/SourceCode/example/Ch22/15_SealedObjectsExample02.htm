@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sealed Objects Example</title>
+</head>
+<body>
+    <p>This only works in browsers that natively support ECMAScript 5.</p>
+    <script>
+        var person = { name: "Nicholas" };
+        console.log(Object.isExtensible(person));   //true
+        console.log(Object.isSealed(person));       //false
+        
+        Object.seal(person);
+        console.log(Object.isExtensible(person));   //false
+        console.log(Object.isSealed(person));       //true
+        
+        person.age = 29;
+        console.log(person.age);
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

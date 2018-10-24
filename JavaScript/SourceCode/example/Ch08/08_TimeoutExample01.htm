@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timeout Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        //avoid!
+        setTimeout("console.log('Hello world!') ", 1000);
+        
+        //preferred
+        setTimeout(function() { 
+            console.log("Hello world!"); 
+        }, 1000);
+
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

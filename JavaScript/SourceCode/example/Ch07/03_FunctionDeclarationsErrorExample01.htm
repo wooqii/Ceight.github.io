@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Declaration Error Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+    var condition = true;
+    
+    //never do this!
+    if(condition){
+        function sayHi(){
+            console.log("Hi!");
+        }
+    } else {
+        function sayHi(){
+            console.log("Yo!");
+        }
+    }
+
+    sayHi();
+    </script>
+ 
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

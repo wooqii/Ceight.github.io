@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Position Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var leftPos = (typeof window.screenLeft == "number") ? 
+                          window.screenLeft : window.screenX;
+        var topPos = (typeof window.screenTop == "number") ? 
+                          window.screenTop : window.screenY;
+
+        console.log("Left: " + leftPos);
+        console.log("Top: " + topPos);
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

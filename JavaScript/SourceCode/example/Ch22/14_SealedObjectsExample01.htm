@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sealed Objects Example</title>
+</head>
+<body>
+    <p>This only works in browsers that natively support ECMAScript 5.</p>
+    <script>
+        var person = { name: "Nicholas" };
+        Object.seal(person);
+        
+        person.age = 29;
+        console.log(person.age);      //undefined
+        
+        delete person.name;
+        console.log(person.name);     //"Nicholas"
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

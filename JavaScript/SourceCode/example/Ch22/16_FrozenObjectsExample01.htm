@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frozen Objects Example</title>
+</head>
+<body>
+    <p>This only works in browsers that natively support ECMAScript 5.</p>
+    <script>
+        var person = { name: "Nicholas" };
+        Object.freeze(person);
+        
+        person.age = 29;
+        console.log(person.age);      //undefined
+        
+        delete person.name;
+        console.log(person.name);     //"Nicholas"
+        
+        person.name = "Greg";
+        console.log(person.name);     //"Nicholas"
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

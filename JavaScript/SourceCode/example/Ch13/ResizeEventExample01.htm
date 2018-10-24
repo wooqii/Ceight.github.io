@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resize Event Example</title>
+    <script type="text/javascript" src="08_EventUtil.js"></script>
+</head>
+<body>
+    <p>Resize event example - resize the browser window.</p>
+    <script type="text/javascript">
+        EventUtil.addHandler(window, "resize", function(event){
+            console.log("Resized");
+        });
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

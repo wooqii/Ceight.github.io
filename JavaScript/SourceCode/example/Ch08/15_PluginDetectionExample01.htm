@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plugin Detection Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+        //plugin detection - doesn't work in IE
+        function hasPlugin(name){
+            name = name.toLowerCase();
+            
+            var types = navigator.mimeTypes,
+                plugin = null,
+                identifier = '';
+            for (var i=0; i < types.length; i++){
+                plugin = types[i];
+                identifier = plugin.name || plugin.description;
+                if (identifier.toLowerCase().indexOf(name) > -1){
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        
+        //detect flash
+        console.log(hasPlugin("Flash"));
+        
+        //detect quicktime
+        console.log(hasPlugin("QuickTime"));
+        
+        //detect Java
+        console.log(hasPlugin("Java"));
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

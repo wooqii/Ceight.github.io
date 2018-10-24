@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Block Scope Example</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        
+            function outputNumbers(count){
+                for (var i=0; i < count; i++){
+                    console.log(i);
+                }
+            
+                console.log(i);   //count
+            }
+
+            outputNumbers(5);
+        </script>
+     
+    <script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

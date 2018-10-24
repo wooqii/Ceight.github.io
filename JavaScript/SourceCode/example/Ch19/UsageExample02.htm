@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+    <title>Usage Example</title>
+</head>
+<body>
+    <p>This example only works in Firefox 1.5+.</p>
+    <script type="text/javascript;e4x=1">
+    
+        var employees =  <employees>
+                            <employee position="Software Engineer">
+                                <name>Nicholas C. Zakas</name>
+                            </employee>
+                            <employee position="Salesperson">
+                                <name>Jim Smith</name>
+                            </employee>
+                        </employees>;
+                        
+        console.log(employees.child("*"));
+        console.log(employees.child("*")[0].name);
+
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

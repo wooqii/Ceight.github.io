@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="http://tranbot.net/util/safeConsole/safeconsole.css"/>
+  <title>map 메서드</title>
+</head>
+
+<body>
+<script src="http://tranbot.net/util/safeConsole/safeconsole.min.js"></script>
+<script type="text/javascript">
+initConsole();
+if ([1].map) {
+    /* 
+        브라우저에서 map 메서드를 지원한다면 네이티브 메서드를 이용하는 편이 당연히 더 좋으므로 
+        먼저 임의의 배열을 만들어 map이란 메서드가 있는지 확인합니다. 
+        브라우저에서 네이티브 메서드를 지원한다면 간단한 메시지를 콘솔에 표시할 겁니다.
+    */
+    console.log('Using native map()..');
+} else {
+    // 아래 코드는 브라우저에서 네이티브 map 메서드를 지원하지 않을때만 실행됩니다.
+    // 먼저 배열 프로토타입에 map 메서드를 추가합니다. 이 메서드는 콜백 함수 하나를 매개변수로 받습니다.
+    Array.prototype.map = function (callback) {
+        // this는 메서드를 호출하는 "원래" 배열입니다.
+        var count = this.length,
+
+        // map 메서드가 반환하는 배열은 원래 배열과 1:1 대응하므로 원래 배열과 크기가 같은 배열을 하나 만듭니다.
+            rtn = new Array(count);
+
+        // 원래 배열을 순화하면서 콜백 함수를 실행하고 그 결과를 반환할 배열에 저장합니다.
+        for (var i = 0; i < count; i++) {
+            rtn[i] = callback( this[i] );
+        };
+
+        // 이제 rtn 배열은 콜백 결과로 채워진, 원래 배열과 1:1 대응하는 배열이며 
+        // 이는 네이티브 map 메서드의 결과와 같습니다. 이를 반환하면 됩니다.
+        return rtn;        
+    }
+}
+
+var values = [1, 2, 3, 4, 5];
+var values2 = values.map(function (data) {
+    return data * 2;
+})
+console.log(values);
+console.log(values2);
+</script>
+</body>
+</html>

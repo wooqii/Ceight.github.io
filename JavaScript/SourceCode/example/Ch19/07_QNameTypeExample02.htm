@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+    <title>QName Type Example</title>
+</head>
+<body>
+    <p>This example only works in Firefox 1.5+.</p>
+    <script type="text/javascript;e4x=1">
+    
+        var xml = <wrox:root xmlns:wrox="http://www.wrox.com/">
+                    <wrox:message>Hello World!</wrox:message>
+                  </wrox:root>;
+        
+        var wroxRoot = xml.name();
+        console.log(wroxRoot.uri);
+        console.log(wroxRoot.localName);
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>

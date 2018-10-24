@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Node Example 5</title>
+    <style type="text/css">
+        .message {
+            font-weight: bold;
+            color: #0f0;
+        }
+    
+    </style>
+</head>
+<body>
+    <input type="button" value="Add Node" onclick="addNode()">
+
+    <script type="text/javascript">
+        function addNode(){
+        
+            var element = document.createElement("div");
+            element.className = "message";
+            
+            var textNode = document.createTextNode("Hello world!");
+            element.appendChild(textNode);
+            
+            document.body.appendChild(element);
+            
+            var newNode = element.firstChild.splitText(5);
+            console.log(element.firstChild.nodeValue);  //"Hello"
+            console.log(newNode.nodeValue);             //" world!"
+            console.log(element.childNodes.length);     //2
+
+            
+        }
+
+    </script>
+<script src="dir.js"></script><script src="../exampleIterator.js"></script></body>
+</html>
